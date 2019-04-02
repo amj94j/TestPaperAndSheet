@@ -7,11 +7,11 @@
 //
 
 #import "ZJTestPaperViewController.h"
-#import "SingleSelectionTableView.h"
-#import "MultiSelectionTableView.h"
-#import "EssayquestionTableView.h"
+#import "ZJSingleSelectionTableView.h"
+//#import "MultiSelectionTableView.h"
+//#import "EssayquestionTableView.h"
 //#import "TestPaperResultController.h"
-#import "CourseExamTopicModel.h"
+#import "ZJCourseExamTopicModel.h"
 #import "UIAlertView+Blocks.h"
 
 #import "ZJSheetViewController.h"
@@ -55,11 +55,14 @@
     
     if (self.type == 0) {
         NSDictionary *dataDic = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"testData" ofType:@"plist" ]];
+        int index = 0;
         for (int i = 0; i<10000; i++) {
             for (NSDictionary *topicDic in dataDic[@"data"]) {
-                CourseExamTopicModel *model = [[CourseExamTopicModel alloc] init];
+                ZJCourseExamTopicModel *model = [[ZJCourseExamTopicModel alloc] init];
                 [model setValuesForKeysWithDictionary:topicDic];
+                model.Id = index;
                 [self.dataSource addObject:model];
+                index++;
             }
         }
         
@@ -140,18 +143,12 @@
     ZJSheetViewController *vc = [ZJSheetViewController new];
     vc.dataSource = self.dataSource;
     [self.navigationController pushViewController:vc animated:YES];
-    vc.action = ^(CourseExamTopicModel * _Nonnull model) {
+    vc.action = ^(ZJCourseExamTopicModel * _Nonnull model) {
         ///
         NSLog(@"跳转到第%d题",model.Id);
+        [self jumpForCurrentIndex:model.Id];
     };
     
-    //把当前控制器作为背景
-//    self.definesPresentationContext = YES;
-    
-    //设置模态视图弹出样式
-//    vc.modalPresentationStyle = UIModalPresentationOverFullScreen;
-//
-//    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)answerAction {
@@ -169,7 +166,7 @@
     [self _updateAnswers];
     __weak typeof(self) weakSelf = self;
     BOOL isDoAll = YES;//题目是否走做完
-    for (CourseExamTopicModel *model in self.dataSource) {
+    for (ZJCourseExamTopicModel *model in self.dataSource) {
         if (model.userAnswer.length == 0) {
             isDoAll = NO;
             break;
@@ -208,6 +205,11 @@
     self.collectionView.contentOffset = CGPointMake((self.currentIndex - 1)*SCREEN_WIDTH, 0);
 }
 
+/// 跳转到相应的题页面
+- (void)jumpForCurrentIndex:(int)currentIndex {
+    self.collectionView.contentOffset = CGPointMake(currentIndex*SCREEN_WIDTH, 0);
+}
+
 - (void)popSelf {
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -223,34 +225,21 @@
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
     [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     cell.backgroundColor = [UIColor cyanColor];
-    CourseExamTopicModel *model = self.dataSource[indexPath.row];
-    BaseTestPaperTableView *tableView = nil;
-    if (model.exerciseType == 1) {//单选
-        tableView = [[SingleSelectionTableView alloc] initWithFrame:CGRectZero];
-        
-    } else if (model.exerciseType == 2) {
-        tableView = [[MultiSelectionTableView alloc] initWithFrame:CGRectZero];
-        
-    } else if (model.exerciseType == 3) {
-        
-        tableView = [[SingleSelectionTableView alloc] initWithFrame:CGRectZero];
-        
-    } else {
-        
-        tableView = [[EssayquestionTableView alloc] initWithFrame:CGRectZero];
-        
-    }
+    ZJCourseExamTopicModel *model = self.dataSource[indexPath.row];
+    
+    ZJSingleSelectionTableView *tableView = [[ZJSingleSelectionTableView alloc] initWithFrame:CGRectZero];
+    model.location = [NSString stringWithFormat:@"%d/%ld",model.Id+1,self.dataSource.count];
     tableView.frame = CGRectMake(0, 0,  self.collectionView.frame.size.width, self.collectionView.frame.size.height);
     [cell.contentView addSubview:tableView];
     
-    if (self.type == 1) {//做过了  看题目
+//    if (self.type == 1) {//做过了  看题目
         [tableView config:model hasFooter:YES index:indexPath.item];
         tableView.tempAnswer = model.userAnswer;
-        
-    } else {
-        [tableView config:model hasFooter:NO index:indexPath.item];
-        tableView.tempAnswer = model.userAnswer;
-    }
+//
+//    } else {
+//        [tableView config:model hasFooter:NO index:indexPath.item];
+//        tableView.tempAnswer = model.userAnswer;
+//    }
     
     return cell;
     
@@ -280,7 +269,7 @@
 //                    make.left.equalTo(SCREEN_WIDTH);
 //                }];
                 
-            }else{// 未提交显示提交
+            } else {// 未提交显示提交
                 [self _changeRightBtnStatusLeftMargin:SCREEN_WIDTH*0.4 title:NSLocalizedString(@"提交", nil) titleColor:[UIColor whiteColor] backColor:RGB(85, 207, 226) action:@selector(submit)];
             }
             
@@ -320,15 +309,15 @@
     
     for (UICollectionViewCell *cell in [self.collectionView visibleCells]) {
         
-        BaseTestPaperTableView *tableView = cell.contentView.subviews[0];
-        
-        [self.dataSource enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(CourseExamTopicModel *model, NSUInteger idx, BOOL * _Nonnull stop) {
-            
-            if (model.Id == [tableView.answer[@"exerId"] intValue]) {
-                model.userAnswer = tableView.answer[@"answer"];
-            }
-            
-        }];
+//        BaseTestPaperTableView *tableView = cell.contentView.subviews[0];
+//        
+//        [self.dataSource enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(CourseExamTopicModel *model, NSUInteger idx, BOOL * _Nonnull stop) {
+//            
+//            if (model.Id == [tableView.answer[@"exerId"] intValue]) {
+//                model.userAnswer = tableView.answer[@"answer"];
+//            }
+//            
+//        }];
         
     }
     

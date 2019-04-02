@@ -23,18 +23,54 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     UIButton *beginTestButton = [[UIButton alloc] initWithFrame:CGRectMake(30, 100, self.view.frame.size.width-60, 88)];
-    [beginTestButton setTitle:@"开始答题" forState:UIControlStateNormal];
+    [beginTestButton setTitle:@"试题练习" forState:UIControlStateNormal];
     beginTestButton.backgroundColor = [UIColor orangeColor];
-    [beginTestButton addTarget:self action:@selector(beginTestAction) forControlEvents:UIControlEventTouchUpInside];
+    [beginTestButton addTarget:self action:@selector(beginTestAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:beginTestButton];
     
-    NSLog(@"%f,%f",[[[UIApplication sharedApplication] delegate] window].safeAreaInsets.bottom,[[[UIApplication sharedApplication] delegate] window].safeAreaInsets.top);
+    UIButton *beginTestButton1 = [[UIButton alloc] initWithFrame:CGRectMake(30, beginTestButton.bottom+20, self.view.frame.size.width-60, 88)];
+    beginTestButton1.tag = 1;
+    [beginTestButton1 setTitle:@"错题与收藏" forState:UIControlStateNormal];
+    beginTestButton1.backgroundColor = [UIColor orangeColor];
+    [beginTestButton1 addTarget:self action:@selector(beginTestAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:beginTestButton1];
+    
+    UIButton *beginTestButton2 = [[UIButton alloc] initWithFrame:CGRectMake(30, beginTestButton1.bottom+20, self.view.frame.size.width-60, 88)];
+    beginTestButton2.tag = 2;
+    [beginTestButton2 setTitle:@"模拟考试" forState:UIControlStateNormal];
+    beginTestButton2.backgroundColor = [UIColor orangeColor];
+    [beginTestButton2 addTarget:self action:@selector(beginTestAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:beginTestButton2];
+    
+    UIButton *beginTestButton3 = [[UIButton alloc] initWithFrame:CGRectMake(30, beginTestButton2.bottom+20, self.view.frame.size.width-60, 88)];
+    beginTestButton3.tag = 3;
+    [beginTestButton3 setTitle:@"正式考核" forState:UIControlStateNormal];
+    beginTestButton3.backgroundColor = [UIColor orangeColor];
+    [beginTestButton3 addTarget:self action:@selector(beginTestAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:beginTestButton3];
+    
     
 }
 
-- (void)beginTestAction {
-    ZJTestPaperViewController *testPaperVC = [ZJTestPaperViewController new];
-    [self.navigationController pushViewController:testPaperVC animated:YES];
+- (void)beginTestAction:(UIButton *)btn {
+    
+    if (btn.tag == 0) {
+        ZJTestPaperViewController *testPaperVC = [ZJTestPaperViewController new];
+        testPaperVC.testPaperType = 0;
+        [self.navigationController pushViewController:testPaperVC animated:YES];
+    } else if (btn.tag == 1) {
+        /// ZJTestPaperTypeWrongAndCollect, ///< 错题与收藏.
+        ZJTestPaperViewController *testPaperVC = [ZJTestPaperViewController new];
+        [self.navigationController pushViewController:testPaperVC animated:YES];
+    } else if (btn.tag == 2) {
+        ZJTestPaperViewController *testPaperVC = [ZJTestPaperViewController new];
+        testPaperVC.testPaperType = 1;
+        [self.navigationController pushViewController:testPaperVC animated:YES];
+    } else if (btn.tag == 3) {
+        ZJTestPaperViewController *testPaperVC = [ZJTestPaperViewController new];
+        testPaperVC.testPaperType = 2;
+        [self.navigationController pushViewController:testPaperVC animated:YES];
+    }
 }
 
 

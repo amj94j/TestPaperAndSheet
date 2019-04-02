@@ -35,7 +35,7 @@
 
 #define NONullString(key)       [key length] > 0 ? key : @""
 
-#define IPHONE_X (@available(iOS 11.0, *)?[[[UIApplication sharedApplication] delegate] window].safeAreaInsets.bottom > 0.0:NO )
+#define IPHONE_X (@available(iOS 11.0, *)?([[[UIApplication sharedApplication] delegate] window].safeAreaInsets.bottom > 0.0):NO)
 #define SafeAreaTopHeight (IPHONE_X ? 88 : 64)
 #define SafeAreaBottomHeight (IPHONE_X ? [[[UIApplication sharedApplication] delegate] window].safeAreaInsets.bottom : 0)
 //iPhone X or XS

@@ -10,6 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, ZJTestPaperType) {
+    ZJTestPaperTypePractice = 0, ///< 试题练习.
+    ZJTestPaperTypeSimulationTest, ///< 模拟考试.
+    ZJTestPaperTypeFormalTest ///< 正式考核.
+};
+
 @interface ZJTestPaperViewController : UIViewController
 
 @property (nonatomic, assign) NSInteger CourseExamId;
@@ -19,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger type;//0:未做   1、做过了
 
 @property (nonatomic, strong) NSMutableArray *dataSource;
+
+@property (nonatomic, assign) ZJTestPaperType *testPaperType;
 
 @end
 

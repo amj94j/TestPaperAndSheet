@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		810B38D42252F48500DEC02C /* ZJSingleSelectionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 810B38D32252F48500DEC02C /* ZJSingleSelectionTableView.m */; };
+		810B38D72252F4C200DEC02C /* ZJCourseExamTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 810B38D62252F4C200DEC02C /* ZJCourseExamTopicModel.m */; };
+		810B38DA225303DE00DEC02C /* ZJSingleSelectionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 810B38D9225303DE00DEC02C /* ZJSingleSelectionConfig.m */; };
 		81EE9BCF2251F9530089C4F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81EE9BCD2251F9530089C4F0 /* Main.storyboard */; };
 		81EE9BD12251F9550089C4F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81EE9BD02251F9550089C4F0 /* Assets.xcassets */; };
 		81EE9BD42251F9550089C4F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81EE9BD22251F9550089C4F0 /* LaunchScreen.storyboard */; };
@@ -44,12 +47,6 @@
 		81EE9C68225200890089C4F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9BCB2251F9530089C4F0 /* ViewController.m */; };
 		81EE9C69225200890089C4F0 /* ZJTestPaperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9BFB2251FADA0089C4F0 /* ZJTestPaperViewController.m */; };
 		81EE9C6A225200890089C4F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9BD62251F9550089C4F0 /* main.m */; };
-		81EE9C7E225203F50089C4F0 /* CourseExamTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C7A225202EA0089C4F0 /* CourseExamTopicModel.m */; };
-		81EE9C7F225203F50089C4F0 /* SingleSelectionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C6D225202E90089C4F0 /* SingleSelectionTableView.m */; };
-		81EE9C80225203F50089C4F0 /* MultiSelectionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C72225202E90089C4F0 /* MultiSelectionTableView.m */; };
-		81EE9C81225203F50089C4F0 /* EssayquestionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C73225202E90089C4F0 /* EssayquestionTableView.m */; };
-		81EE9C82225203F50089C4F0 /* BaseTestPaperTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C74225202EA0089C4F0 /* BaseTestPaperTableView.m */; };
-		81EE9C83225203FD0089C4F0 /* SingleSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C77225202EA0089C4F0 /* SingleSelectCell.m */; };
 		81EE9C86225204970089C4F0 /* testData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81EE9C7D225202EA0089C4F0 /* testData.plist */; };
 		81EE9C8A225206E80089C4F0 /* ZJSingleSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C88225206E80089C4F0 /* ZJSingleSelectCell.m */; };
 		81EE9C8B225206E80089C4F0 /* ZJSingleSelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81EE9C89225206E80089C4F0 /* ZJSingleSelectCell.xib */; };
@@ -74,6 +71,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		810B38D22252F48500DEC02C /* ZJSingleSelectionTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSingleSelectionTableView.h; sourceTree = "<group>"; };
+		810B38D32252F48500DEC02C /* ZJSingleSelectionTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSingleSelectionTableView.m; sourceTree = "<group>"; };
+		810B38D52252F4C200DEC02C /* ZJCourseExamTopicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJCourseExamTopicModel.h; sourceTree = "<group>"; };
+		810B38D62252F4C200DEC02C /* ZJCourseExamTopicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJCourseExamTopicModel.m; sourceTree = "<group>"; };
+		810B38D8225303DE00DEC02C /* ZJSingleSelectionConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSingleSelectionConfig.h; sourceTree = "<group>"; };
+		810B38D9225303DE00DEC02C /* ZJSingleSelectionConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSingleSelectionConfig.m; sourceTree = "<group>"; };
 		81EE9BC42251F9530089C4F0 /* TestPaperAndSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestPaperAndSheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81EE9BC72251F9530089C4F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		81EE9BC82251F9530089C4F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -158,19 +161,6 @@
 		81EE9C472251FCE60089C4F0 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
 		81EE9C482251FCE60089C4F0 /* UIView+YYAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+YYAdd.h"; sourceTree = "<group>"; };
 		81EE9C492251FD1D0089C4F0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		81EE9C6D225202E90089C4F0 /* SingleSelectionTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleSelectionTableView.m; sourceTree = "<group>"; };
-		81EE9C6E225202E90089C4F0 /* EssayquestionTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EssayquestionTableView.h; sourceTree = "<group>"; };
-		81EE9C6F225202E90089C4F0 /* MultiSelectionTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiSelectionTableView.h; sourceTree = "<group>"; };
-		81EE9C70225202E90089C4F0 /* BaseTestPaperTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTestPaperTableView.h; sourceTree = "<group>"; };
-		81EE9C71225202E90089C4F0 /* SingleSelectionTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleSelectionTableView.h; sourceTree = "<group>"; };
-		81EE9C72225202E90089C4F0 /* MultiSelectionTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiSelectionTableView.m; sourceTree = "<group>"; };
-		81EE9C73225202E90089C4F0 /* EssayquestionTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EssayquestionTableView.m; sourceTree = "<group>"; };
-		81EE9C74225202EA0089C4F0 /* BaseTestPaperTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTestPaperTableView.m; sourceTree = "<group>"; };
-		81EE9C76225202EA0089C4F0 /* SingleSelectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleSelectCell.h; sourceTree = "<group>"; };
-		81EE9C77225202EA0089C4F0 /* SingleSelectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleSelectCell.m; sourceTree = "<group>"; };
-		81EE9C78225202EA0089C4F0 /* SingleSelectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleSelectCell.xib; sourceTree = "<group>"; };
-		81EE9C7A225202EA0089C4F0 /* CourseExamTopicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseExamTopicModel.m; sourceTree = "<group>"; };
-		81EE9C7B225202EA0089C4F0 /* CourseExamTopicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseExamTopicModel.h; sourceTree = "<group>"; };
 		81EE9C7D225202EA0089C4F0 /* testData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = testData.plist; sourceTree = "<group>"; };
 		81EE9C87225206E80089C4F0 /* ZJSingleSelectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSingleSelectCell.h; sourceTree = "<group>"; };
 		81EE9C88225206E80089C4F0 /* ZJSingleSelectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSingleSelectCell.m; sourceTree = "<group>"; };
@@ -439,14 +429,10 @@
 		81EE9C6C225202E90089C4F0 /* tableView */ = {
 			isa = PBXGroup;
 			children = (
-				81EE9C71225202E90089C4F0 /* SingleSelectionTableView.h */,
-				81EE9C6D225202E90089C4F0 /* SingleSelectionTableView.m */,
-				81EE9C6F225202E90089C4F0 /* MultiSelectionTableView.h */,
-				81EE9C72225202E90089C4F0 /* MultiSelectionTableView.m */,
-				81EE9C6E225202E90089C4F0 /* EssayquestionTableView.h */,
-				81EE9C73225202E90089C4F0 /* EssayquestionTableView.m */,
-				81EE9C70225202E90089C4F0 /* BaseTestPaperTableView.h */,
-				81EE9C74225202EA0089C4F0 /* BaseTestPaperTableView.m */,
+				810B38D22252F48500DEC02C /* ZJSingleSelectionTableView.h */,
+				810B38D32252F48500DEC02C /* ZJSingleSelectionTableView.m */,
+				810B38D8225303DE00DEC02C /* ZJSingleSelectionConfig.h */,
+				810B38D9225303DE00DEC02C /* ZJSingleSelectionConfig.m */,
 			);
 			path = tableView;
 			sourceTree = "<group>";
@@ -454,9 +440,6 @@
 		81EE9C75225202EA0089C4F0 /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				81EE9C76225202EA0089C4F0 /* SingleSelectCell.h */,
-				81EE9C77225202EA0089C4F0 /* SingleSelectCell.m */,
-				81EE9C78225202EA0089C4F0 /* SingleSelectCell.xib */,
 				81EE9C87225206E80089C4F0 /* ZJSingleSelectCell.h */,
 				81EE9C88225206E80089C4F0 /* ZJSingleSelectCell.m */,
 				81EE9C89225206E80089C4F0 /* ZJSingleSelectCell.xib */,
@@ -467,8 +450,8 @@
 		81EE9C79225202EA0089C4F0 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				81EE9C7A225202EA0089C4F0 /* CourseExamTopicModel.m */,
-				81EE9C7B225202EA0089C4F0 /* CourseExamTopicModel.h */,
+				810B38D52252F4C200DEC02C /* ZJCourseExamTopicModel.h */,
+				810B38D62252F4C200DEC02C /* ZJCourseExamTopicModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -632,23 +615,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				81EE9C8E2252129A0089C4F0 /* ZJSheetViewController.m in Sources */,
-				81EE9C83225203FD0089C4F0 /* SingleSelectCell.m in Sources */,
-				81EE9C7E225203F50089C4F0 /* CourseExamTopicModel.m in Sources */,
-				81EE9C7F225203F50089C4F0 /* SingleSelectionTableView.m in Sources */,
-				81EE9C80225203F50089C4F0 /* MultiSelectionTableView.m in Sources */,
-				81EE9C81225203F50089C4F0 /* EssayquestionTableView.m in Sources */,
-				81EE9C82225203F50089C4F0 /* BaseTestPaperTableView.m in Sources */,
 				81EE9C67225200890089C4F0 /* AppDelegate.m in Sources */,
 				81EE9C68225200890089C4F0 /* ViewController.m in Sources */,
 				81EE9C69225200890089C4F0 /* ZJTestPaperViewController.m in Sources */,
 				81EE9C6A225200890089C4F0 /* main.m in Sources */,
 				81EE9C5A2252007B0089C4F0 /* IQToolbar.m in Sources */,
+				810B38DA225303DE00DEC02C /* ZJSingleSelectionConfig.m in Sources */,
 				81EE9C8A225206E80089C4F0 /* ZJSingleSelectCell.m in Sources */,
 				81EE9C5B2252007B0089C4F0 /* IQTitleBarButtonItem.m in Sources */,
 				81EE9C5C2252007B0089C4F0 /* IQBarButtonItem.m in Sources */,
 				81EE9C5D2252007B0089C4F0 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				81EE9C5E2252007B0089C4F0 /* IQPreviousNextView.m in Sources */,
 				81EE9C5F2252007B0089C4F0 /* IQKeyboardManager.m in Sources */,
+				810B38D42252F48500DEC02C /* ZJSingleSelectionTableView.m in Sources */,
 				81EE9C602252007B0089C4F0 /* IQNSArray+Sort.m in Sources */,
 				81EE9C612252007B0089C4F0 /* IQUIWindow+Hierarchy.m in Sources */,
 				81EE9C622252007B0089C4F0 /* IQUITextFieldView+Additions.m in Sources */,
@@ -657,6 +636,7 @@
 				81EE9C652252007B0089C4F0 /* IQUIViewController+Additions.m in Sources */,
 				81EE9C662252007B0089C4F0 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				81EE9C59225200620089C4F0 /* IQTextView.m in Sources */,
+				810B38D72252F4C200DEC02C /* ZJCourseExamTopicModel.m in Sources */,
 				81EE9C51225200560089C4F0 /* MASCompositeConstraint.m in Sources */,
 				81EE9C52225200560089C4F0 /* MASConstraintMaker.m in Sources */,
 				81EE9C53225200560089C4F0 /* MASLayoutConstraint.m in Sources */,

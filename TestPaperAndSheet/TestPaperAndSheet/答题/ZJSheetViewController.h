@@ -7,17 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CourseExamTopicModel.h"
+#import "ZJCourseExamTopicModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^ selecedWhichTopic)(CourseExamTopicModel *model);
+typedef void(^ selecedWhichTopic)(ZJCourseExamTopicModel *model);
 
 @interface ZJSheetViewController : UIViewController
 
 @property (nonatomic, strong) NSMutableArray *dataSource;
 
-/// @brief 点击事件 - 存储block作为属性要记得用copy，而不是assign
 @property (nonatomic, copy) selecedWhichTopic action;
 
 @end

@@ -36,17 +36,13 @@
 
 
 #pragma mark - UI
-
 - (void)setupCollectionView {
     
-    
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
-    
     flowLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
     flowLayout.minimumInteritemSpacing = 0;
     flowLayout.minimumLineSpacing = 0;
     flowLayout.itemSize = CGSizeMake(SCREEN_WIDTH/6-3, SCREEN_WIDTH/6-3);
-    //确定水平滑动方向
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
     
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - SafeAreaTopHeight - SafeAreaBottomHeight) collectionViewLayout:flowLayout];
@@ -73,7 +69,7 @@
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
     [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     cell.backgroundColor = [UIColor cyanColor];
-    CourseExamTopicModel *model = self.dataSource[indexPath.row];
+    ZJCourseExamTopicModel *model = self.dataSource[indexPath.row];
     
     if ([model.answer isEqualToString:model.userAnswer] && model.userAnswer.length != 0) {
         /// 回答正确
@@ -91,7 +87,7 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    CourseExamTopicModel *model = self.dataSource[indexPath.row];
+    ZJCourseExamTopicModel *model = self.dataSource[indexPath.row];
     if (self.action) {
         self.action(model);
     }
