@@ -11,6 +11,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void (^ZJSingleSelectionTableViewSelectedBlock) (ZJCourseExamTopicModel *model);
+
 @interface ZJSingleSelectionTableView : UITableView
 
 @property (nonatomic, strong) NSArray *answerList;
@@ -18,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSArray *questionList;
 
 @property (nonatomic, copy) NSString *tempAnswer; ///< 默认选中的答案 用来查看已经做过的题.
+
+@property (nonatomic, copy) ZJSingleSelectionTableViewSelectedBlock block;
 
 - (void)config:(ZJCourseExamTopicModel *)model  hasFooter:(BOOL)hasFooter index:(NSInteger)index;
 

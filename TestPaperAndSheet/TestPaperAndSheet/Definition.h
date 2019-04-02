@@ -2,8 +2,6 @@
 //  Definition.h
 //  TestPaper
 //
-//  Created by lilei on 17/2/25.
-//  Copyright © 2017年 lilei. All rights reserved.
 //
 
 #ifndef Definition_h

@@ -52,7 +52,7 @@
     self.collectionView.scrollEnabled = YES;
     self.collectionView.showsHorizontalScrollIndicator = NO;
     self.collectionView.showsVerticalScrollIndicator = NO;
-    self.collectionView.backgroundColor = [UIColor orangeColor];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
     [self.view addSubview:self.collectionView];
     
@@ -68,19 +68,26 @@
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
     [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    cell.backgroundColor = [UIColor cyanColor];
+    cell.backgroundColor = [UIColor whiteColor];
     ZJCourseExamTopicModel *model = self.dataSource[indexPath.row];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, cell.width-10, cell.height-10)];
+    label.backgroundColor = [UIColor lightGrayColor];
+    label.layer.cornerRadius = cell.width/2-5;
+    label.layer.masksToBounds = YES;
+    label.textAlignment = NSTextAlignmentCenter;
+    label.text = [NSString stringWithFormat:@"%d",model.Id];
+    [cell.contentView addSubview:label];
     
     if ([model.answer isEqualToString:model.userAnswer] && model.userAnswer.length != 0) {
         /// 回答正确
-        cell.backgroundColor = [UIColor greenColor];
-    } else if (model.userAnswer.length == 0) {
-        /// 未答题
-        cell.backgroundColor = [UIColor whiteColor];
-    } else if (![model.answer isEqualToString:model.userAnswer]) {
+        label.backgroundColor = [UIColor greenColor];
+    } else if ((![model.answer isEqualToString:model.userAnswer]) && model.userAnswer.length != 0) {
         /// 回答错误
-        cell.backgroundColor = [UIColor redColor];
+        label.backgroundColor = [UIColor redColor];
     }
+    
+    
     
     return cell;
     
@@ -93,6 +100,8 @@
     }
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+
 
 /*
 #pragma mark - Navigation

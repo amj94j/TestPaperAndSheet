@@ -103,7 +103,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     self.selected = indexPath.row;
-    
+    self.model.userAnswer = self.answerList[_selected];
+    if (self.block) {
+        self.block(self.model);
+    }
     [self reloadData];
 }
 
@@ -140,12 +143,12 @@
 //    [self reloadData];
 //}
 
-- (NSDictionary *)answer {
-    
-    if (self.selected != -1) return  @{@"exerId":@(self.model.Id),@"answer":self.answerList[_selected]};
-    return @{@"exerId":@(self.model.Id),@"answer":@""};
-    
-}
+//- (NSDictionary *)answer {
+//    
+//    if (self.selected != -1) return  @{@"exerId":@(self.model.Id),@"answer":self.answerList[_selected]};
+//    return @{@"exerId":@(self.model.Id),@"answer":@""};
+//    
+//}
 
 
 

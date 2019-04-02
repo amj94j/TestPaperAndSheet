@@ -10,6 +10,7 @@
 		810B38D42252F48500DEC02C /* ZJSingleSelectionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 810B38D32252F48500DEC02C /* ZJSingleSelectionTableView.m */; };
 		810B38D72252F4C200DEC02C /* ZJCourseExamTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 810B38D62252F4C200DEC02C /* ZJCourseExamTopicModel.m */; };
 		810B38DA225303DE00DEC02C /* ZJSingleSelectionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 810B38D9225303DE00DEC02C /* ZJSingleSelectionConfig.m */; };
+		810B397922535B6F00DEC02C /* ZJTestPaperBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 810B397822535B6F00DEC02C /* ZJTestPaperBottomView.m */; };
 		81EE9BCF2251F9530089C4F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81EE9BCD2251F9530089C4F0 /* Main.storyboard */; };
 		81EE9BD12251F9550089C4F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81EE9BD02251F9550089C4F0 /* Assets.xcassets */; };
 		81EE9BD42251F9550089C4F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81EE9BD22251F9550089C4F0 /* LaunchScreen.storyboard */; };
@@ -77,6 +78,8 @@
 		810B38D62252F4C200DEC02C /* ZJCourseExamTopicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJCourseExamTopicModel.m; sourceTree = "<group>"; };
 		810B38D8225303DE00DEC02C /* ZJSingleSelectionConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSingleSelectionConfig.h; sourceTree = "<group>"; };
 		810B38D9225303DE00DEC02C /* ZJSingleSelectionConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSingleSelectionConfig.m; sourceTree = "<group>"; };
+		810B397722535B6F00DEC02C /* ZJTestPaperBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJTestPaperBottomView.h; sourceTree = "<group>"; };
+		810B397822535B6F00DEC02C /* ZJTestPaperBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJTestPaperBottomView.m; sourceTree = "<group>"; };
 		81EE9BC42251F9530089C4F0 /* TestPaperAndSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestPaperAndSheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81EE9BC72251F9530089C4F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		81EE9BC82251F9530089C4F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -410,9 +413,9 @@
 			isa = PBXGroup;
 			children = (
 				81EE9C452251FCE60089C4F0 /* UIAlertView+Blocks.h */,
-				81EE9C462251FCE60089C4F0 /* UIView+YYAdd.m */,
 				81EE9C472251FCE60089C4F0 /* UIAlertView+Blocks.m */,
 				81EE9C482251FCE60089C4F0 /* UIView+YYAdd.h */,
+				81EE9C462251FCE60089C4F0 /* UIView+YYAdd.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -422,6 +425,8 @@
 			children = (
 				81EE9C6C225202E90089C4F0 /* tableView */,
 				81EE9C75225202EA0089C4F0 /* cell */,
+				810B397722535B6F00DEC02C /* ZJTestPaperBottomView.h */,
+				810B397822535B6F00DEC02C /* ZJTestPaperBottomView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -615,6 +620,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81EE9C8E2252129A0089C4F0 /* ZJSheetViewController.m in Sources */,
+				810B397922535B6F00DEC02C /* ZJTestPaperBottomView.m in Sources */,
 				81EE9C67225200890089C4F0 /* AppDelegate.m in Sources */,
 				81EE9C68225200890089C4F0 /* ViewController.m in Sources */,
 				81EE9C69225200890089C4F0 /* ZJTestPaperViewController.m in Sources */,

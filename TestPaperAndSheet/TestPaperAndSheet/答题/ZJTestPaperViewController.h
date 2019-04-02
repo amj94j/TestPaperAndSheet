@@ -26,7 +26,7 @@ typedef NS_ENUM(NSInteger, ZJTestPaperType) {
 
 @property (nonatomic, strong) NSMutableArray *dataSource;
 
-@property (nonatomic, assign) ZJTestPaperType *testPaperType;
+@property (nonatomic, assign) ZJTestPaperType testPaperType;
 
 @end
 

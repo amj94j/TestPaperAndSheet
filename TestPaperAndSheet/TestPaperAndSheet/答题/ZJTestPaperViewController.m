@@ -7,18 +7,18 @@
 //
 
 #import "ZJTestPaperViewController.h"
-#import "ZJSingleSelectionTableView.h"
-//#import "MultiSelectionTableView.h"
-//#import "EssayquestionTableView.h"
-//#import "TestPaperResultController.h"
-#import "ZJCourseExamTopicModel.h"
-#import "UIAlertView+Blocks.h"
 
 #import "ZJSheetViewController.h"
 
+#import "ZJCourseExamTopicModel.h"
+#import "UIAlertView+Blocks.h"
+
+#import "ZJSingleSelectionTableView.h"
+#import "ZJTestPaperBottomView.h"
+
 #define kBottomH  60.0f
 
-@interface ZJTestPaperViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface ZJTestPaperViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, ZJTestPaperBottomViewDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
@@ -56,7 +56,7 @@
     if (self.type == 0) {
         NSDictionary *dataDic = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"testData" ofType:@"plist" ]];
         int index = 0;
-        for (int i = 0; i<10000; i++) {
+        for (int i = 0; i<1111; i++) {
             for (NSDictionary *topicDic in dataDic[@"data"]) {
                 ZJCourseExamTopicModel *model = [[ZJCourseExamTopicModel alloc] init];
                 [model setValuesForKeysWithDictionary:topicDic];
@@ -65,7 +65,6 @@
                 index++;
             }
         }
-        
         
     }
     
@@ -101,44 +100,27 @@
 
 - (void)setupBottomView {
     
-    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - SafeAreaTopHeight - SafeAreaBottomHeight - kBottomH, SCREEN_WIDTH, kBottomH)];
+    ZJTestPaperBottomView *bottomView = [[ZJTestPaperBottomView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - SafeAreaTopHeight - SafeAreaBottomHeight - kBottomH, SCREEN_WIDTH, kBottomH)];
     bottomView.backgroundColor = kHomeColor;
+    bottomView.delegate = self;
+    if (self.testPaperType == 0) {
+        bottomView.type = 0;
+    } else {
+        bottomView.type = 1;
+    }
     [self.view addSubview:bottomView];
-    
-    /// 答题卡
-    UIButton *sheetButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    sheetButton.frame = CGRectMake(0, 0, bottomView.width/3, bottomView.height);
-    [sheetButton setTitleColor:RGB(100, 100, 100) forState:UIControlStateNormal];
-    sheetButton.titleLabel.font = [UIFont systemFontOfSize:20];
-    [sheetButton setTitle:@"答题卡" forState:UIControlStateNormal];
-    sheetButton.backgroundColor = [UIColor whiteColor];
-    [bottomView addSubview:sheetButton];
-    [sheetButton addTarget:self action:@selector(sheetAction) forControlEvents:UIControlEventTouchUpInside];
-    
-    /// 答案
-    UIButton *answerButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    answerButton.frame = CGRectMake(bottomView.width/3, 0, bottomView.width/3, bottomView.height);
-    [answerButton setTitleColor:RGB(100, 100, 100) forState:UIControlStateNormal];
-    answerButton.titleLabel.font = [UIFont systemFontOfSize:20];
-    [answerButton setTitle:@"答案" forState:UIControlStateNormal];
-    answerButton.backgroundColor = [UIColor whiteColor];
-    [bottomView addSubview:answerButton];
-    [answerButton addTarget:self action:@selector(answerAction) forControlEvents:UIControlEventTouchUpInside];
-    
-    /// 收藏此题
-    UIButton *collectionButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    collectionButton.frame = CGRectMake(bottomView.width/3*2, 0, bottomView.width/3, bottomView.height);
-    [collectionButton setTitleColor:RGB(100, 100, 100) forState:UIControlStateNormal];
-    collectionButton.titleLabel.font = [UIFont systemFontOfSize:20];
-    [collectionButton setTitle:@"收藏此题" forState:UIControlStateNormal];
-    collectionButton.backgroundColor = [UIColor whiteColor];
-    [bottomView addSubview:collectionButton];
-    [collectionButton addTarget:self action:@selector(collectionAction) forControlEvents:UIControlEventTouchUpInside];
-    
+
 }
 
+
+#pragma mark - ZJTestPaperBottomViewDelegate
 /// 答题卡
-- (void)sheetAction {
+- (void)sheetClick:(NSInteger)type {
+    if (type == 0) {
+        /// 练习
+    } else if (type == 1) {
+        /// 考试
+    }
     /// 使用模态 然后将点击的数据传回来 然后跳转到相应的数据里面去
     ZJSheetViewController *vc = [ZJSheetViewController new];
     vc.dataSource = self.dataSource;
@@ -151,11 +133,15 @@
     
 }
 
-- (void)answerAction {
+- (void)answerClick {
     
 }
 
-- (void)collectionAction {
+- (void)collectionClick {
+    
+}
+
+- (void)endClick {
     
 }
 
@@ -197,7 +183,12 @@
 
 // 下一题
 - (void)next {
-    self.collectionView.contentOffset = CGPointMake((self.currentIndex + 1)*SCREEN_WIDTH, 0);
+//    self.collectionView.contentOffset = CGPointMake((self.currentIndex + 1)*SCREEN_WIDTH, 0);
+     [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:(self.currentIndex + 1) inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+}
+
+- (void)nextAnimation {
+    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:(self.currentIndex + 1) inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
 }
 
 // 上一题
@@ -241,6 +232,10 @@
 //        tableView.tempAnswer = model.userAnswer;
 //    }
     
+    tableView.block = ^(ZJCourseExamTopicModel * _Nonnull model) {
+        [self nextAnimation];
+    };
+    
     return cell;
     
 }
@@ -255,7 +250,7 @@
         self.defautIndex = -1;
         
         // 更新保存的答案
-        [self _updateAnswers];
+//        [self _updateAnswers];
         
         self.currentIndex = index;
         
