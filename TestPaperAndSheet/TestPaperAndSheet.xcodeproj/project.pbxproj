@@ -1,0 +1,971 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		81EE9BCF2251F9530089C4F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81EE9BCD2251F9530089C4F0 /* Main.storyboard */; };
+		81EE9BD12251F9550089C4F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81EE9BD02251F9550089C4F0 /* Assets.xcassets */; };
+		81EE9BD42251F9550089C4F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81EE9BD22251F9550089C4F0 /* LaunchScreen.storyboard */; };
+		81EE9BE12251F9550089C4F0 /* TestPaperAndSheetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9BE02251F9550089C4F0 /* TestPaperAndSheetTests.m */; };
+		81EE9BEC2251F9550089C4F0 /* TestPaperAndSheetUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9BEB2251F9550089C4F0 /* TestPaperAndSheetUITests.m */; };
+		81EE9C4A2251FFCE0089C4F0 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 81EE9C322251FCE60089C4F0 /* IQKeyboardManager.bundle */; };
+		81EE9C4C2252003C0089C4F0 /* UIView+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C462251FCE60089C4F0 /* UIView+YYAdd.m */; };
+		81EE9C4D2252003F0089C4F0 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C472251FCE60089C4F0 /* UIAlertView+Blocks.m */; };
+		81EE9C4E225200430089C4F0 /* HYTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C002251FCE60089C4F0 /* HYTextView.m */; };
+		81EE9C4F225200460089C4F0 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C042251FCE60089C4F0 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		81EE9C502252004B0089C4F0 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C0D2251FCE60089C4F0 /* ViewController+MASAdditions.m */; };
+		81EE9C51225200560089C4F0 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C112251FCE60089C4F0 /* MASCompositeConstraint.m */; };
+		81EE9C52225200560089C4F0 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C122251FCE60089C4F0 /* MASConstraintMaker.m */; };
+		81EE9C53225200560089C4F0 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C132251FCE60089C4F0 /* MASLayoutConstraint.m */; };
+		81EE9C54225200560089C4F0 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C142251FCE60089C4F0 /* NSArray+MASAdditions.m */; };
+		81EE9C55225200560089C4F0 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C152251FCE60089C4F0 /* View+MASAdditions.m */; };
+		81EE9C56225200560089C4F0 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C182251FCE60089C4F0 /* MASConstraint.m */; };
+		81EE9C57225200560089C4F0 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C1A2251FCE60089C4F0 /* MASViewConstraint.m */; };
+		81EE9C58225200560089C4F0 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C1B2251FCE60089C4F0 /* MASViewAttribute.m */; };
+		81EE9C59225200620089C4F0 /* IQTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C212251FCE60089C4F0 /* IQTextView.m */; };
+		81EE9C5A2252007B0089C4F0 /* IQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C252251FCE60089C4F0 /* IQToolbar.m */; };
+		81EE9C5B2252007B0089C4F0 /* IQTitleBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C272251FCE60089C4F0 /* IQTitleBarButtonItem.m */; };
+		81EE9C5C2252007B0089C4F0 /* IQBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C282251FCE60089C4F0 /* IQBarButtonItem.m */; };
+		81EE9C5D2252007B0089C4F0 /* IQUIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C292251FCE60089C4F0 /* IQUIView+IQKeyboardToolbar.m */; };
+		81EE9C5E2252007B0089C4F0 /* IQPreviousNextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C2A2251FCE60089C4F0 /* IQPreviousNextView.m */; };
+		81EE9C5F2252007B0089C4F0 /* IQKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C352251FCE60089C4F0 /* IQKeyboardManager.m */; };
+		81EE9C602252007B0089C4F0 /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C372251FCE60089C4F0 /* IQNSArray+Sort.m */; };
+		81EE9C612252007B0089C4F0 /* IQUIWindow+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C382251FCE60089C4F0 /* IQUIWindow+Hierarchy.m */; };
+		81EE9C622252007B0089C4F0 /* IQUITextFieldView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C3A2251FCE60089C4F0 /* IQUITextFieldView+Additions.m */; };
+		81EE9C632252007B0089C4F0 /* IQUIScrollView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C3B2251FCE60089C4F0 /* IQUIScrollView+Additions.m */; };
+		81EE9C642252007B0089C4F0 /* IQUIView+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C3C2251FCE60089C4F0 /* IQUIView+Hierarchy.m */; };
+		81EE9C652252007B0089C4F0 /* IQUIViewController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C412251FCE60089C4F0 /* IQUIViewController+Additions.m */; };
+		81EE9C662252007B0089C4F0 /* IQKeyboardReturnKeyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C432251FCE60089C4F0 /* IQKeyboardReturnKeyHandler.m */; };
+		81EE9C67225200890089C4F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9BC82251F9530089C4F0 /* AppDelegate.m */; };
+		81EE9C68225200890089C4F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9BCB2251F9530089C4F0 /* ViewController.m */; };
+		81EE9C69225200890089C4F0 /* ZJTestPaperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9BFB2251FADA0089C4F0 /* ZJTestPaperViewController.m */; };
+		81EE9C6A225200890089C4F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9BD62251F9550089C4F0 /* main.m */; };
+		81EE9C7E225203F50089C4F0 /* CourseExamTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C7A225202EA0089C4F0 /* CourseExamTopicModel.m */; };
+		81EE9C7F225203F50089C4F0 /* SingleSelectionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C6D225202E90089C4F0 /* SingleSelectionTableView.m */; };
+		81EE9C80225203F50089C4F0 /* MultiSelectionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C72225202E90089C4F0 /* MultiSelectionTableView.m */; };
+		81EE9C81225203F50089C4F0 /* EssayquestionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C73225202E90089C4F0 /* EssayquestionTableView.m */; };
+		81EE9C82225203F50089C4F0 /* BaseTestPaperTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C74225202EA0089C4F0 /* BaseTestPaperTableView.m */; };
+		81EE9C83225203FD0089C4F0 /* SingleSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C77225202EA0089C4F0 /* SingleSelectCell.m */; };
+		81EE9C86225204970089C4F0 /* testData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81EE9C7D225202EA0089C4F0 /* testData.plist */; };
+		81EE9C8A225206E80089C4F0 /* ZJSingleSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C88225206E80089C4F0 /* ZJSingleSelectCell.m */; };
+		81EE9C8B225206E80089C4F0 /* ZJSingleSelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81EE9C89225206E80089C4F0 /* ZJSingleSelectCell.xib */; };
+		81EE9C8E2252129A0089C4F0 /* ZJSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE9C8D2252129A0089C4F0 /* ZJSheetViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		81EE9BDD2251F9550089C4F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81EE9BBC2251F9530089C4F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81EE9BC32251F9530089C4F0;
+			remoteInfo = TestPaperAndSheet;
+		};
+		81EE9BE82251F9550089C4F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81EE9BBC2251F9530089C4F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81EE9BC32251F9530089C4F0;
+			remoteInfo = TestPaperAndSheet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		81EE9BC42251F9530089C4F0 /* TestPaperAndSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestPaperAndSheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81EE9BC72251F9530089C4F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		81EE9BC82251F9530089C4F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		81EE9BCA2251F9530089C4F0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		81EE9BCB2251F9530089C4F0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		81EE9BCE2251F9530089C4F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		81EE9BD02251F9550089C4F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		81EE9BD32251F9550089C4F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		81EE9BD52251F9550089C4F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81EE9BD62251F9550089C4F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		81EE9BDC2251F9550089C4F0 /* TestPaperAndSheetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestPaperAndSheetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81EE9BE02251F9550089C4F0 /* TestPaperAndSheetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestPaperAndSheetTests.m; sourceTree = "<group>"; };
+		81EE9BE22251F9550089C4F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81EE9BE72251F9550089C4F0 /* TestPaperAndSheetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestPaperAndSheetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81EE9BEB2251F9550089C4F0 /* TestPaperAndSheetUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestPaperAndSheetUITests.m; sourceTree = "<group>"; };
+		81EE9BED2251F9550089C4F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81EE9BFA2251FADA0089C4F0 /* ZJTestPaperViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJTestPaperViewController.h; sourceTree = "<group>"; };
+		81EE9BFB2251FADA0089C4F0 /* ZJTestPaperViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJTestPaperViewController.m; sourceTree = "<group>"; };
+		81EE9BFD2251FCE50089C4F0 /* Definition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Definition.h; sourceTree = "<group>"; };
+		81EE9C002251FCE60089C4F0 /* HYTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYTextView.m; sourceTree = "<group>"; };
+		81EE9C012251FCE60089C4F0 /* HYTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYTextView.h; sourceTree = "<group>"; };
+		81EE9C032251FCE60089C4F0 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		81EE9C042251FCE60089C4F0 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		81EE9C052251FCE60089C4F0 /* MASConstraint+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		81EE9C062251FCE60089C4F0 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		81EE9C072251FCE60089C4F0 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		81EE9C082251FCE60089C4F0 /* MASConstraintMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		81EE9C092251FCE60089C4F0 /* View+MASAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		81EE9C0A2251FCE60089C4F0 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		81EE9C0B2251FCE60089C4F0 /* MASUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		81EE9C0C2251FCE60089C4F0 /* MASViewAttribute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		81EE9C0D2251FCE60089C4F0 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		81EE9C0E2251FCE60089C4F0 /* MASViewConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		81EE9C0F2251FCE60089C4F0 /* MASConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		81EE9C102251FCE60089C4F0 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		81EE9C112251FCE60089C4F0 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		81EE9C122251FCE60089C4F0 /* MASConstraintMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		81EE9C132251FCE60089C4F0 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		81EE9C142251FCE60089C4F0 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		81EE9C152251FCE60089C4F0 /* View+MASAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		81EE9C162251FCE60089C4F0 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		81EE9C172251FCE60089C4F0 /* Masonry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		81EE9C182251FCE60089C4F0 /* MASConstraint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		81EE9C192251FCE60089C4F0 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		81EE9C1A2251FCE60089C4F0 /* MASViewConstraint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		81EE9C1B2251FCE60089C4F0 /* MASViewAttribute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		81EE9C1D2251FCE60089C4F0 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		81EE9C1E2251FCE60089C4F0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		81EE9C212251FCE60089C4F0 /* IQTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IQTextView.m; sourceTree = "<group>"; };
+		81EE9C222251FCE60089C4F0 /* IQTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IQTextView.h; sourceTree = "<group>"; };
+		81EE9C242251FCE60089C4F0 /* IQUIView+IQKeyboardToolbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IQUIView+IQKeyboardToolbar.h"; sourceTree = "<group>"; };
+		81EE9C252251FCE60089C4F0 /* IQToolbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IQToolbar.m; sourceTree = "<group>"; };
+		81EE9C262251FCE60089C4F0 /* IQPreviousNextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IQPreviousNextView.h; sourceTree = "<group>"; };
+		81EE9C272251FCE60089C4F0 /* IQTitleBarButtonItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IQTitleBarButtonItem.m; sourceTree = "<group>"; };
+		81EE9C282251FCE60089C4F0 /* IQBarButtonItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IQBarButtonItem.m; sourceTree = "<group>"; };
+		81EE9C292251FCE60089C4F0 /* IQUIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "IQUIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
+		81EE9C2A2251FCE60089C4F0 /* IQPreviousNextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IQPreviousNextView.m; sourceTree = "<group>"; };
+		81EE9C2B2251FCE60089C4F0 /* IQToolbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IQToolbar.h; sourceTree = "<group>"; };
+		81EE9C2C2251FCE60089C4F0 /* IQBarButtonItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IQBarButtonItem.h; sourceTree = "<group>"; };
+		81EE9C2D2251FCE60089C4F0 /* IQTitleBarButtonItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IQTitleBarButtonItem.h; sourceTree = "<group>"; };
+		81EE9C2F2251FCE60089C4F0 /* IQKeyboardManagerConstantsInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerConstantsInternal.h; sourceTree = "<group>"; };
+		81EE9C302251FCE60089C4F0 /* IQKeyboardManagerConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerConstants.h; sourceTree = "<group>"; };
+		81EE9C322251FCE60089C4F0 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		81EE9C332251FCE60089C4F0 /* IQKeyboardReturnKeyHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IQKeyboardReturnKeyHandler.h; sourceTree = "<group>"; };
+		81EE9C342251FCE60089C4F0 /* IQKeyboardManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManager.h; sourceTree = "<group>"; };
+		81EE9C352251FCE60089C4F0 /* IQKeyboardManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IQKeyboardManager.m; sourceTree = "<group>"; };
+		81EE9C372251FCE60089C4F0 /* IQNSArray+Sort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "IQNSArray+Sort.m"; sourceTree = "<group>"; };
+		81EE9C382251FCE60089C4F0 /* IQUIWindow+Hierarchy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "IQUIWindow+Hierarchy.m"; sourceTree = "<group>"; };
+		81EE9C392251FCE60089C4F0 /* IQUIViewController+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IQUIViewController+Additions.h"; sourceTree = "<group>"; };
+		81EE9C3A2251FCE60089C4F0 /* IQUITextFieldView+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "IQUITextFieldView+Additions.m"; sourceTree = "<group>"; };
+		81EE9C3B2251FCE60089C4F0 /* IQUIScrollView+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "IQUIScrollView+Additions.m"; sourceTree = "<group>"; };
+		81EE9C3C2251FCE60089C4F0 /* IQUIView+Hierarchy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "IQUIView+Hierarchy.m"; sourceTree = "<group>"; };
+		81EE9C3D2251FCE60089C4F0 /* IQUIWindow+Hierarchy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IQUIWindow+Hierarchy.h"; sourceTree = "<group>"; };
+		81EE9C3E2251FCE60089C4F0 /* IQNSArray+Sort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IQNSArray+Sort.h"; sourceTree = "<group>"; };
+		81EE9C3F2251FCE60089C4F0 /* IQUIScrollView+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IQUIScrollView+Additions.h"; sourceTree = "<group>"; };
+		81EE9C402251FCE60089C4F0 /* IQUITextFieldView+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IQUITextFieldView+Additions.h"; sourceTree = "<group>"; };
+		81EE9C412251FCE60089C4F0 /* IQUIViewController+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "IQUIViewController+Additions.m"; sourceTree = "<group>"; };
+		81EE9C422251FCE60089C4F0 /* IQUIView+Hierarchy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IQUIView+Hierarchy.h"; sourceTree = "<group>"; };
+		81EE9C432251FCE60089C4F0 /* IQKeyboardReturnKeyHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IQKeyboardReturnKeyHandler.m; sourceTree = "<group>"; };
+		81EE9C452251FCE60089C4F0 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		81EE9C462251FCE60089C4F0 /* UIView+YYAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+YYAdd.m"; sourceTree = "<group>"; };
+		81EE9C472251FCE60089C4F0 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		81EE9C482251FCE60089C4F0 /* UIView+YYAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+YYAdd.h"; sourceTree = "<group>"; };
+		81EE9C492251FD1D0089C4F0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		81EE9C6D225202E90089C4F0 /* SingleSelectionTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleSelectionTableView.m; sourceTree = "<group>"; };
+		81EE9C6E225202E90089C4F0 /* EssayquestionTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EssayquestionTableView.h; sourceTree = "<group>"; };
+		81EE9C6F225202E90089C4F0 /* MultiSelectionTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiSelectionTableView.h; sourceTree = "<group>"; };
+		81EE9C70225202E90089C4F0 /* BaseTestPaperTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTestPaperTableView.h; sourceTree = "<group>"; };
+		81EE9C71225202E90089C4F0 /* SingleSelectionTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleSelectionTableView.h; sourceTree = "<group>"; };
+		81EE9C72225202E90089C4F0 /* MultiSelectionTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiSelectionTableView.m; sourceTree = "<group>"; };
+		81EE9C73225202E90089C4F0 /* EssayquestionTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EssayquestionTableView.m; sourceTree = "<group>"; };
+		81EE9C74225202EA0089C4F0 /* BaseTestPaperTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTestPaperTableView.m; sourceTree = "<group>"; };
+		81EE9C76225202EA0089C4F0 /* SingleSelectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleSelectCell.h; sourceTree = "<group>"; };
+		81EE9C77225202EA0089C4F0 /* SingleSelectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleSelectCell.m; sourceTree = "<group>"; };
+		81EE9C78225202EA0089C4F0 /* SingleSelectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleSelectCell.xib; sourceTree = "<group>"; };
+		81EE9C7A225202EA0089C4F0 /* CourseExamTopicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseExamTopicModel.m; sourceTree = "<group>"; };
+		81EE9C7B225202EA0089C4F0 /* CourseExamTopicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseExamTopicModel.h; sourceTree = "<group>"; };
+		81EE9C7D225202EA0089C4F0 /* testData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = testData.plist; sourceTree = "<group>"; };
+		81EE9C87225206E80089C4F0 /* ZJSingleSelectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSingleSelectCell.h; sourceTree = "<group>"; };
+		81EE9C88225206E80089C4F0 /* ZJSingleSelectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSingleSelectCell.m; sourceTree = "<group>"; };
+		81EE9C89225206E80089C4F0 /* ZJSingleSelectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZJSingleSelectCell.xib; sourceTree = "<group>"; };
+		81EE9C8C2252129A0089C4F0 /* ZJSheetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSheetViewController.h; sourceTree = "<group>"; };
+		81EE9C8D2252129A0089C4F0 /* ZJSheetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSheetViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		81EE9BC12251F9530089C4F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81EE9BD92251F9550089C4F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81EE9BE42251F9550089C4F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		81EE9BBB2251F9530089C4F0 = {
+			isa = PBXGroup;
+			children = (
+				81EE9BC62251F9530089C4F0 /* TestPaperAndSheet */,
+				81EE9BDF2251F9550089C4F0 /* TestPaperAndSheetTests */,
+				81EE9BEA2251F9550089C4F0 /* TestPaperAndSheetUITests */,
+				81EE9BC52251F9530089C4F0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		81EE9BC52251F9530089C4F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81EE9BC42251F9530089C4F0 /* TestPaperAndSheet.app */,
+				81EE9BDC2251F9550089C4F0 /* TestPaperAndSheetTests.xctest */,
+				81EE9BE72251F9550089C4F0 /* TestPaperAndSheetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81EE9BC62251F9530089C4F0 /* TestPaperAndSheet */ = {
+			isa = PBXGroup;
+			children = (
+				81EE9BFD2251FCE50089C4F0 /* Definition.h */,
+				81EE9C442251FCE60089C4F0 /* Categories */,
+				81EE9BFE2251FCE60089C4F0 /* Vendors */,
+				81EE9BC72251F9530089C4F0 /* AppDelegate.h */,
+				81EE9BC82251F9530089C4F0 /* AppDelegate.m */,
+				81EE9BCA2251F9530089C4F0 /* ViewController.h */,
+				81EE9BCB2251F9530089C4F0 /* ViewController.m */,
+				81EE9BF92251FA900089C4F0 /* 答题 */,
+				81EE9BCD2251F9530089C4F0 /* Main.storyboard */,
+				81EE9BD02251F9550089C4F0 /* Assets.xcassets */,
+				81EE9BD22251F9550089C4F0 /* LaunchScreen.storyboard */,
+				81EE9BD52251F9550089C4F0 /* Info.plist */,
+				81EE9BD62251F9550089C4F0 /* main.m */,
+				81EE9C492251FD1D0089C4F0 /* PrefixHeader.pch */,
+			);
+			path = TestPaperAndSheet;
+			sourceTree = "<group>";
+		};
+		81EE9BDF2251F9550089C4F0 /* TestPaperAndSheetTests */ = {
+			isa = PBXGroup;
+			children = (
+				81EE9BE02251F9550089C4F0 /* TestPaperAndSheetTests.m */,
+				81EE9BE22251F9550089C4F0 /* Info.plist */,
+			);
+			path = TestPaperAndSheetTests;
+			sourceTree = "<group>";
+		};
+		81EE9BEA2251F9550089C4F0 /* TestPaperAndSheetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				81EE9BEB2251F9550089C4F0 /* TestPaperAndSheetUITests.m */,
+				81EE9BED2251F9550089C4F0 /* Info.plist */,
+			);
+			path = TestPaperAndSheetUITests;
+			sourceTree = "<group>";
+		};
+		81EE9BF92251FA900089C4F0 /* 答题 */ = {
+			isa = PBXGroup;
+			children = (
+				81EE9BFA2251FADA0089C4F0 /* ZJTestPaperViewController.h */,
+				81EE9BFB2251FADA0089C4F0 /* ZJTestPaperViewController.m */,
+				81EE9C8C2252129A0089C4F0 /* ZJSheetViewController.h */,
+				81EE9C8D2252129A0089C4F0 /* ZJSheetViewController.m */,
+				81EE9C79225202EA0089C4F0 /* model */,
+				81EE9C7C225202EA0089C4F0 /* resource */,
+				81EE9C6B225202E90089C4F0 /* view */,
+			);
+			path = "答题";
+			sourceTree = "<group>";
+		};
+		81EE9BFE2251FCE60089C4F0 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				81EE9BFF2251FCE60089C4F0 /* HYTextView */,
+				81EE9C022251FCE60089C4F0 /* Masonry */,
+				81EE9C1C2251FCE60089C4F0 /* IQKeyboardManager */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		81EE9BFF2251FCE60089C4F0 /* HYTextView */ = {
+			isa = PBXGroup;
+			children = (
+				81EE9C002251FCE60089C4F0 /* HYTextView.m */,
+				81EE9C012251FCE60089C4F0 /* HYTextView.h */,
+			);
+			path = HYTextView;
+			sourceTree = "<group>";
+		};
+		81EE9C022251FCE60089C4F0 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				81EE9C032251FCE60089C4F0 /* MASCompositeConstraint.h */,
+				81EE9C042251FCE60089C4F0 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				81EE9C052251FCE60089C4F0 /* MASConstraint+Private.h */,
+				81EE9C062251FCE60089C4F0 /* MASLayoutConstraint.h */,
+				81EE9C072251FCE60089C4F0 /* NSArray+MASShorthandAdditions.h */,
+				81EE9C082251FCE60089C4F0 /* MASConstraintMaker.h */,
+				81EE9C092251FCE60089C4F0 /* View+MASAdditions.h */,
+				81EE9C0A2251FCE60089C4F0 /* NSArray+MASAdditions.h */,
+				81EE9C0B2251FCE60089C4F0 /* MASUtilities.h */,
+				81EE9C0C2251FCE60089C4F0 /* MASViewAttribute.h */,
+				81EE9C0D2251FCE60089C4F0 /* ViewController+MASAdditions.m */,
+				81EE9C0E2251FCE60089C4F0 /* MASViewConstraint.h */,
+				81EE9C0F2251FCE60089C4F0 /* MASConstraint.h */,
+				81EE9C102251FCE60089C4F0 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				81EE9C112251FCE60089C4F0 /* MASCompositeConstraint.m */,
+				81EE9C122251FCE60089C4F0 /* MASConstraintMaker.m */,
+				81EE9C132251FCE60089C4F0 /* MASLayoutConstraint.m */,
+				81EE9C142251FCE60089C4F0 /* NSArray+MASAdditions.m */,
+				81EE9C152251FCE60089C4F0 /* View+MASAdditions.m */,
+				81EE9C162251FCE60089C4F0 /* View+MASShorthandAdditions.h */,
+				81EE9C172251FCE60089C4F0 /* Masonry.h */,
+				81EE9C182251FCE60089C4F0 /* MASConstraint.m */,
+				81EE9C192251FCE60089C4F0 /* ViewController+MASAdditions.h */,
+				81EE9C1A2251FCE60089C4F0 /* MASViewConstraint.m */,
+				81EE9C1B2251FCE60089C4F0 /* MASViewAttribute.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		81EE9C1C2251FCE60089C4F0 /* IQKeyboardManager */ = {
+			isa = PBXGroup;
+			children = (
+				81EE9C1D2251FCE60089C4F0 /* LICENSE.md */,
+				81EE9C1E2251FCE60089C4F0 /* README.md */,
+				81EE9C1F2251FCE60089C4F0 /* IQKeyboardManager */,
+			);
+			path = IQKeyboardManager;
+			sourceTree = "<group>";
+		};
+		81EE9C1F2251FCE60089C4F0 /* IQKeyboardManager */ = {
+			isa = PBXGroup;
+			children = (
+				81EE9C202251FCE60089C4F0 /* IQTextView */,
+				81EE9C232251FCE60089C4F0 /* IQToolbar */,
+				81EE9C2E2251FCE60089C4F0 /* Constants */,
+				81EE9C312251FCE60089C4F0 /* Resources */,
+				81EE9C332251FCE60089C4F0 /* IQKeyboardReturnKeyHandler.h */,
+				81EE9C342251FCE60089C4F0 /* IQKeyboardManager.h */,
+				81EE9C352251FCE60089C4F0 /* IQKeyboardManager.m */,
+				81EE9C362251FCE60089C4F0 /* Categories */,
+				81EE9C432251FCE60089C4F0 /* IQKeyboardReturnKeyHandler.m */,
+			);
+			path = IQKeyboardManager;
+			sourceTree = "<group>";
+		};
+		81EE9C202251FCE60089C4F0 /* IQTextView */ = {
+			isa = PBXGroup;
+			children = (
+				81EE9C212251FCE60089C4F0 /* IQTextView.m */,
+				81EE9C222251FCE60089C4F0 /* IQTextView.h */,
+			);
+			path = IQTextView;
+			sourceTree = "<group>";
+		};
+		81EE9C232251FCE60089C4F0 /* IQToolbar */ = {
+			isa = PBXGroup;
+			children = (
+				81EE9C242251FCE60089C4F0 /* IQUIView+IQKeyboardToolbar.h */,
+				81EE9C252251FCE60089C4F0 /* IQToolbar.m */,
+				81EE9C262251FCE60089C4F0 /* IQPreviousNextView.h */,
+				81EE9C272251FCE60089C4F0 /* IQTitleBarButtonItem.m */,
+				81EE9C282251FCE60089C4F0 /* IQBarButtonItem.m */,
+				81EE9C292251FCE60089C4F0 /* IQUIView+IQKeyboardToolbar.m */,
+				81EE9C2A2251FCE60089C4F0 /* IQPreviousNextView.m */,
+				81EE9C2B2251FCE60089C4F0 /* IQToolbar.h */,
+				81EE9C2C2251FCE60089C4F0 /* IQBarButtonItem.h */,
+				81EE9C2D2251FCE60089C4F0 /* IQTitleBarButtonItem.h */,
+			);
+			path = IQToolbar;
+			sourceTree = "<group>";
+		};
+		81EE9C2E2251FCE60089C4F0 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				81EE9C2F2251FCE60089C4F0 /* IQKeyboardManagerConstantsInternal.h */,
+				81EE9C302251FCE60089C4F0 /* IQKeyboardManagerConstants.h */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		81EE9C312251FCE60089C4F0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				81EE9C322251FCE60089C4F0 /* IQKeyboardManager.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		81EE9C362251FCE60089C4F0 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				81EE9C372251FCE60089C4F0 /* IQNSArray+Sort.m */,
+				81EE9C382251FCE60089C4F0 /* IQUIWindow+Hierarchy.m */,
+				81EE9C392251FCE60089C4F0 /* IQUIViewController+Additions.h */,
+				81EE9C3A2251FCE60089C4F0 /* IQUITextFieldView+Additions.m */,
+				81EE9C3B2251FCE60089C4F0 /* IQUIScrollView+Additions.m */,
+				81EE9C3C2251FCE60089C4F0 /* IQUIView+Hierarchy.m */,
+				81EE9C3D2251FCE60089C4F0 /* IQUIWindow+Hierarchy.h */,
+				81EE9C3E2251FCE60089C4F0 /* IQNSArray+Sort.h */,
+				81EE9C3F2251FCE60089C4F0 /* IQUIScrollView+Additions.h */,
+				81EE9C402251FCE60089C4F0 /* IQUITextFieldView+Additions.h */,
+				81EE9C412251FCE60089C4F0 /* IQUIViewController+Additions.m */,
+				81EE9C422251FCE60089C4F0 /* IQUIView+Hierarchy.h */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		81EE9C442251FCE60089C4F0 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				81EE9C452251FCE60089C4F0 /* UIAlertView+Blocks.h */,
+				81EE9C462251FCE60089C4F0 /* UIView+YYAdd.m */,
+				81EE9C472251FCE60089C4F0 /* UIAlertView+Blocks.m */,
+				81EE9C482251FCE60089C4F0 /* UIView+YYAdd.h */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		81EE9C6B225202E90089C4F0 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				81EE9C6C225202E90089C4F0 /* tableView */,
+				81EE9C75225202EA0089C4F0 /* cell */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		81EE9C6C225202E90089C4F0 /* tableView */ = {
+			isa = PBXGroup;
+			children = (
+				81EE9C71225202E90089C4F0 /* SingleSelectionTableView.h */,
+				81EE9C6D225202E90089C4F0 /* SingleSelectionTableView.m */,
+				81EE9C6F225202E90089C4F0 /* MultiSelectionTableView.h */,
+				81EE9C72225202E90089C4F0 /* MultiSelectionTableView.m */,
+				81EE9C6E225202E90089C4F0 /* EssayquestionTableView.h */,
+				81EE9C73225202E90089C4F0 /* EssayquestionTableView.m */,
+				81EE9C70225202E90089C4F0 /* BaseTestPaperTableView.h */,
+				81EE9C74225202EA0089C4F0 /* BaseTestPaperTableView.m */,
+			);
+			path = tableView;
+			sourceTree = "<group>";
+		};
+		81EE9C75225202EA0089C4F0 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				81EE9C76225202EA0089C4F0 /* SingleSelectCell.h */,
+				81EE9C77225202EA0089C4F0 /* SingleSelectCell.m */,
+				81EE9C78225202EA0089C4F0 /* SingleSelectCell.xib */,
+				81EE9C87225206E80089C4F0 /* ZJSingleSelectCell.h */,
+				81EE9C88225206E80089C4F0 /* ZJSingleSelectCell.m */,
+				81EE9C89225206E80089C4F0 /* ZJSingleSelectCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		81EE9C79225202EA0089C4F0 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				81EE9C7A225202EA0089C4F0 /* CourseExamTopicModel.m */,
+				81EE9C7B225202EA0089C4F0 /* CourseExamTopicModel.h */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		81EE9C7C225202EA0089C4F0 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				81EE9C7D225202EA0089C4F0 /* testData.plist */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		81EE9BC32251F9530089C4F0 /* TestPaperAndSheet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81EE9BF02251F9550089C4F0 /* Build configuration list for PBXNativeTarget "TestPaperAndSheet" */;
+			buildPhases = (
+				81EE9BC12251F9530089C4F0 /* Frameworks */,
+				81EE9BC22251F9530089C4F0 /* Resources */,
+				81EE9C4B2252002C0089C4F0 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestPaperAndSheet;
+			productName = TestPaperAndSheet;
+			productReference = 81EE9BC42251F9530089C4F0 /* TestPaperAndSheet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		81EE9BDB2251F9550089C4F0 /* TestPaperAndSheetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81EE9BF32251F9550089C4F0 /* Build configuration list for PBXNativeTarget "TestPaperAndSheetTests" */;
+			buildPhases = (
+				81EE9BD82251F9550089C4F0 /* Sources */,
+				81EE9BD92251F9550089C4F0 /* Frameworks */,
+				81EE9BDA2251F9550089C4F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81EE9BDE2251F9550089C4F0 /* PBXTargetDependency */,
+			);
+			name = TestPaperAndSheetTests;
+			productName = TestPaperAndSheetTests;
+			productReference = 81EE9BDC2251F9550089C4F0 /* TestPaperAndSheetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		81EE9BE62251F9550089C4F0 /* TestPaperAndSheetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81EE9BF62251F9550089C4F0 /* Build configuration list for PBXNativeTarget "TestPaperAndSheetUITests" */;
+			buildPhases = (
+				81EE9BE32251F9550089C4F0 /* Sources */,
+				81EE9BE42251F9550089C4F0 /* Frameworks */,
+				81EE9BE52251F9550089C4F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81EE9BE92251F9550089C4F0 /* PBXTargetDependency */,
+			);
+			name = TestPaperAndSheetUITests;
+			productName = TestPaperAndSheetUITests;
+			productReference = 81EE9BE72251F9550089C4F0 /* TestPaperAndSheetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81EE9BBC2251F9530089C4F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ZJ;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = _zhangJ;
+				TargetAttributes = {
+					81EE9BC32251F9530089C4F0 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					81EE9BDB2251F9550089C4F0 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 81EE9BC32251F9530089C4F0;
+					};
+					81EE9BE62251F9550089C4F0 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 81EE9BC32251F9530089C4F0;
+					};
+				};
+			};
+			buildConfigurationList = 81EE9BBF2251F9530089C4F0 /* Build configuration list for PBXProject "TestPaperAndSheet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 81EE9BBB2251F9530089C4F0;
+			productRefGroup = 81EE9BC52251F9530089C4F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				81EE9BC32251F9530089C4F0 /* TestPaperAndSheet */,
+				81EE9BDB2251F9550089C4F0 /* TestPaperAndSheetTests */,
+				81EE9BE62251F9550089C4F0 /* TestPaperAndSheetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		81EE9BC22251F9530089C4F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81EE9C86225204970089C4F0 /* testData.plist in Resources */,
+				81EE9C4A2251FFCE0089C4F0 /* IQKeyboardManager.bundle in Resources */,
+				81EE9BD42251F9550089C4F0 /* LaunchScreen.storyboard in Resources */,
+				81EE9C8B225206E80089C4F0 /* ZJSingleSelectCell.xib in Resources */,
+				81EE9BD12251F9550089C4F0 /* Assets.xcassets in Resources */,
+				81EE9BCF2251F9530089C4F0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81EE9BDA2251F9550089C4F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81EE9BE52251F9550089C4F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81EE9BD82251F9550089C4F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81EE9BE12251F9550089C4F0 /* TestPaperAndSheetTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81EE9BE32251F9550089C4F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81EE9BEC2251F9550089C4F0 /* TestPaperAndSheetUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81EE9C4B2252002C0089C4F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81EE9C8E2252129A0089C4F0 /* ZJSheetViewController.m in Sources */,
+				81EE9C83225203FD0089C4F0 /* SingleSelectCell.m in Sources */,
+				81EE9C7E225203F50089C4F0 /* CourseExamTopicModel.m in Sources */,
+				81EE9C7F225203F50089C4F0 /* SingleSelectionTableView.m in Sources */,
+				81EE9C80225203F50089C4F0 /* MultiSelectionTableView.m in Sources */,
+				81EE9C81225203F50089C4F0 /* EssayquestionTableView.m in Sources */,
+				81EE9C82225203F50089C4F0 /* BaseTestPaperTableView.m in Sources */,
+				81EE9C67225200890089C4F0 /* AppDelegate.m in Sources */,
+				81EE9C68225200890089C4F0 /* ViewController.m in Sources */,
+				81EE9C69225200890089C4F0 /* ZJTestPaperViewController.m in Sources */,
+				81EE9C6A225200890089C4F0 /* main.m in Sources */,
+				81EE9C5A2252007B0089C4F0 /* IQToolbar.m in Sources */,
+				81EE9C8A225206E80089C4F0 /* ZJSingleSelectCell.m in Sources */,
+				81EE9C5B2252007B0089C4F0 /* IQTitleBarButtonItem.m in Sources */,
+				81EE9C5C2252007B0089C4F0 /* IQBarButtonItem.m in Sources */,
+				81EE9C5D2252007B0089C4F0 /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				81EE9C5E2252007B0089C4F0 /* IQPreviousNextView.m in Sources */,
+				81EE9C5F2252007B0089C4F0 /* IQKeyboardManager.m in Sources */,
+				81EE9C602252007B0089C4F0 /* IQNSArray+Sort.m in Sources */,
+				81EE9C612252007B0089C4F0 /* IQUIWindow+Hierarchy.m in Sources */,
+				81EE9C622252007B0089C4F0 /* IQUITextFieldView+Additions.m in Sources */,
+				81EE9C632252007B0089C4F0 /* IQUIScrollView+Additions.m in Sources */,
+				81EE9C642252007B0089C4F0 /* IQUIView+Hierarchy.m in Sources */,
+				81EE9C652252007B0089C4F0 /* IQUIViewController+Additions.m in Sources */,
+				81EE9C662252007B0089C4F0 /* IQKeyboardReturnKeyHandler.m in Sources */,
+				81EE9C59225200620089C4F0 /* IQTextView.m in Sources */,
+				81EE9C51225200560089C4F0 /* MASCompositeConstraint.m in Sources */,
+				81EE9C52225200560089C4F0 /* MASConstraintMaker.m in Sources */,
+				81EE9C53225200560089C4F0 /* MASLayoutConstraint.m in Sources */,
+				81EE9C54225200560089C4F0 /* NSArray+MASAdditions.m in Sources */,
+				81EE9C55225200560089C4F0 /* View+MASAdditions.m in Sources */,
+				81EE9C56225200560089C4F0 /* MASConstraint.m in Sources */,
+				81EE9C57225200560089C4F0 /* MASViewConstraint.m in Sources */,
+				81EE9C58225200560089C4F0 /* MASViewAttribute.m in Sources */,
+				81EE9C502252004B0089C4F0 /* ViewController+MASAdditions.m in Sources */,
+				81EE9C4F225200460089C4F0 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				81EE9C4E225200430089C4F0 /* HYTextView.m in Sources */,
+				81EE9C4D2252003F0089C4F0 /* UIAlertView+Blocks.m in Sources */,
+				81EE9C4C2252003C0089C4F0 /* UIView+YYAdd.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		81EE9BDE2251F9550089C4F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81EE9BC32251F9530089C4F0 /* TestPaperAndSheet */;
+			targetProxy = 81EE9BDD2251F9550089C4F0 /* PBXContainerItemProxy */;
+		};
+		81EE9BE92251F9550089C4F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81EE9BC32251F9530089C4F0 /* TestPaperAndSheet */;
+			targetProxy = 81EE9BE82251F9550089C4F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		81EE9BCD2251F9530089C4F0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81EE9BCE2251F9530089C4F0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		81EE9BD22251F9550089C4F0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81EE9BD32251F9550089C4F0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		81EE9BEE2251F9550089C4F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		81EE9BEF2251F9550089C4F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		81EE9BF12251F9550089C4F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TestPaperAndSheet/PrefixHeader.pch;
+				INFOPLIST_FILE = TestPaperAndSheet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = YZK.TestPaperAndSheet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		81EE9BF22251F9550089C4F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TestPaperAndSheet/PrefixHeader.pch;
+				INFOPLIST_FILE = TestPaperAndSheet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = YZK.TestPaperAndSheet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		81EE9BF42251F9550089C4F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TestPaperAndSheetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = YZK.TestPaperAndSheetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestPaperAndSheet.app/TestPaperAndSheet";
+			};
+			name = Debug;
+		};
+		81EE9BF52251F9550089C4F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TestPaperAndSheetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = YZK.TestPaperAndSheetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestPaperAndSheet.app/TestPaperAndSheet";
+			};
+			name = Release;
+		};
+		81EE9BF72251F9550089C4F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TestPaperAndSheetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = YZK.TestPaperAndSheetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TestPaperAndSheet;
+			};
+			name = Debug;
+		};
+		81EE9BF82251F9550089C4F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TestPaperAndSheetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = YZK.TestPaperAndSheetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TestPaperAndSheet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81EE9BBF2251F9530089C4F0 /* Build configuration list for PBXProject "TestPaperAndSheet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81EE9BEE2251F9550089C4F0 /* Debug */,
+				81EE9BEF2251F9550089C4F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81EE9BF02251F9550089C4F0 /* Build configuration list for PBXNativeTarget "TestPaperAndSheet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81EE9BF12251F9550089C4F0 /* Debug */,
+				81EE9BF22251F9550089C4F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81EE9BF32251F9550089C4F0 /* Build configuration list for PBXNativeTarget "TestPaperAndSheetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81EE9BF42251F9550089C4F0 /* Debug */,
+				81EE9BF52251F9550089C4F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81EE9BF62251F9550089C4F0 /* Build configuration list for PBXNativeTarget "TestPaperAndSheetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81EE9BF72251F9550089C4F0 /* Debug */,
+				81EE9BF82251F9550089C4F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 81EE9BBC2251F9530089C4F0 /* Project object */;
+}
